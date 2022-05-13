@@ -16,5 +16,17 @@ namespace pruebaGit
         {
             InitializeComponent();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            lblMensaje.Text = "* * *   B I E N V E N I D O   * * *";
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Esta seguro de salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (r == DialogResult.Yes)
+                this.Close();
+        }
     }
 }
